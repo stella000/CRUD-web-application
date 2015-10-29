@@ -3,19 +3,21 @@
 	  <meta charset="utf-8">  
 	  <title>Product Review</title>
 	  <link rel="stylesheet" href="hey.css"/>
-	  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
 	  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.js"></script>
+	  <script src="raty-fa/lib/jquery.raty-fa.js"></script> 
+	  <script src="parse.js"></script>
+ 
 	</head>
 	<body>
 		<div class="container">
 			<h1>CamelBak eddy .75L Water Bottle</h1>
 			<br></br>
-		  	<img src="waterbottle.jpg" alt="water bottle" style="width:100px;height:300px;border:0"></img>
+			<img src="img/waterbottle5.jpg" alt="water bottle" style="width:100px;height:300px;border:0"></img>
+		  	<img src="img/waterbottle.jpg" alt="water bottle" style="width:100px;height:300px;border:0"></img>
 		  	<img src="img/waterbottle1.jpg" alt="water bottle" style="width:100px;height:300px;border:0"></img>
 		  	<img src="img/waterbottle2.jpg" alt="water bottle" style="width:100px;height:300px;border:0"></img>
 		  	<img src="img/waterbottle3.jpg" alt="water bottle" style="width:100px;height:300px;border:0"></img>
 		  	<img src="img/waterbottle4.jpg" alt="water bottle" style="width:100px;height:300px;border:0"></img>
-		  	<img src="img/waterbottle5.jpg" alt="water bottle" style="width:100px;height:300px;border:0"></img>
 		  	<br></br>
 		  	<h2>Average Rating: </h2>
 		  	<p>
@@ -30,15 +32,14 @@
 			<h2>Write a Review</h2>
 			<form>
 				<label for= "title"><h4> Title </h4></label><br>
-		        <input id = "title" class = "input-large search-query" placeholder="Title"></input><br>
+		        <textarea id = "title" placeholder="Title" style="height:4%"></textarea><br>
 				<label for= "comment"><h4> Reviews </h4></label><br>
-		        <input id = "comments" class = "input-large search-query" placeholder="Tell me what you think..." style="height:300px width:800px"></input><br>
+		        <textarea id = "comment"placeholder="Tell me what you think..." style="height:30%"></textarea><br>
 		        <label for= "rating"><h4> Ratings </h4></label><br>
-		        <input id = "rating" class = "input-large search-query" placeholder="Rating (from 1 as worst to 5 as best)"></input><br></br>
+		        <textarea id = "rating"placeholder="Rating (from 1 as worst to 5 as best)" style="height:4%"></textarea><br></br>
 		        <button type = "submit" class = "btn btn-success"> Submit </button><br>
 		    </form>
+		    <div id="score"></div>
 		</div>
-
-
 	</body>
 </html>

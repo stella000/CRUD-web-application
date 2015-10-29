@@ -2,11 +2,32 @@
 @import url('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css');
 @import url('https://fonts.googleapis.com/css?family=Lobster|Poppins:300');
 
-body{
+li{
 	font-family: "Poppins:300", sans-serif;
-	font-size:160px;
+	font-size:14px;
 }
 
-form{
-	width:100%;
+h4{
+	font-family:"Lobster";
+	font-size:20px;
+}
+
+form textarea {
+	width:50%;
+}
+
+form textarea {
+	width:50%;
+}
+
+form label{
+	margin-top: 1em;
+}
+
+form button{
+	margin-top: 1em;
+	width:10%;
+}
+#score {
+	color:yellow;
 }
