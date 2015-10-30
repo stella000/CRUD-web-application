@@ -3,21 +3,30 @@
 @import url('https://fonts.googleapis.com/css?family=Lobster|Poppins:300');
 
 li{
-	font-family: "Poppins:300", sans-serif;
+	font-family:"Poppins:300", sans-serif;
 	font-size:14px;
 }
+
+h3{
+	font-family:"Poppins:300", sans-serif;
+	font-size:14px;
+}          
 
 h4{
 	font-family:"Lobster";
 	font-size:20px;
 }
 
-form textarea {
-	width:50%;
-}
+h5{
+	font-family:"Poppins:300", sans-serif;
+	font-size:14px;
+	font-weight: bold;
+}          
 
 form textarea {
 	width:50%;
+	font-family:"Poppins:300", sans-serif;
+	font-size:14px;
 }
 
 form label{
@@ -29,5 +38,5 @@ form button{
 	width:10%;
 }
 #score {
-	color:yellow;
+	color:black;
 }

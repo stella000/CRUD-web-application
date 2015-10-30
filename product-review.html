@@ -4,6 +4,7 @@
 	  <title>Product Review</title>
 	  <link rel="stylesheet" href="hey.css"/>
 	  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.js"></script>
+	  <script src="//www.parsecdn.com/js/parse-1.6.0.min.js"></script>
 	  <script src="raty-fa/lib/jquery.raty-fa.js"></script> 
 	  <script src="parse.js"></script>
  
@@ -18,28 +19,32 @@
 		  	<img src="img/waterbottle2.jpg" alt="water bottle" style="width:100px;height:300px;border:0"></img>
 		  	<img src="img/waterbottle3.jpg" alt="water bottle" style="width:100px;height:300px;border:0"></img>
 		  	<img src="img/waterbottle4.jpg" alt="water bottle" style="width:100px;height:300px;border:0"></img>
-		  	<br></br>
-		  	<h2>Average Rating: </h2>
-		  	<p>
+		  	<br></br>"
+		  			  	<h3>Average Rating: <div id= "score"></div></h3>
+		  	<h2>Details</h2>
+		  	<ul id = "firstList">
 		  		<br>
 		  		<li>Redesigned cap and bite valve provide faster flow and enhanced durability</li>
 				<li>Flip, Bite and Sip. No tipping required (though possible: just remove the straw</li>
 				<li>Dishwasher Safe: All parts are top-rack dishwasher safe</li>
 				<li>Durable, BPA-Free, easy to carry and spill proof
-				CamelBak got your BakTM Lifetime guarantee</li></p>
+				CamelBak got your BakTM Lifetime guarantee</li>
+			</ul>
 		</div>
 		<div class="container">
 			<h2>Write a Review</h2>
 			<form>
+				<div id="rating"></div>
 				<label for= "title"><h4> Title </h4></label><br>
 		        <textarea id = "title" placeholder="Title" style="height:4%"></textarea><br>
 				<label for= "comment"><h4> Reviews </h4></label><br>
 		        <textarea id = "comment"placeholder="Tell me what you think..." style="height:30%"></textarea><br>
-		        <label for= "rating"><h4> Ratings </h4></label><br>
-		        <textarea id = "rating"placeholder="Rating (from 1 as worst to 5 as best)" style="height:4%"></textarea><br></br>
-		        <button type = "submit" class = "btn btn-success"> Submit </button><br>
+		        <button type = "submit" class = "btn btn-success"> Submit </button>
 		    </form>
-		    <div id="score"></div>
+		</div>
+		<div class = "container">
+			</ul>
+			<ul id = "newList">
 		</div>
 	</body>
 </html>
