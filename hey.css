@@ -10,6 +10,7 @@ li{
 h3{
 	font-family:"Poppins:300", sans-serif;
 	font-size:14px;
+	font-weight: bold;
 }          
 
 h4{
@@ -29,14 +30,19 @@ form textarea {
 	font-size:14px;
 }
 
-form label{
+form label {
 	margin-top: 1em;
 }
 
-form button{
+form button {
 	margin-top: 1em;
 	width:10%;
 }
+
+button {
+	font-family:"Poppins:300", sans-serif;
+}
+
 #score {
 	color:black;
 }

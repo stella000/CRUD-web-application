@@ -3,6 +3,11 @@ $(function(){
 
 	var Review = Parse.Object.extend("review")
 
+	var num = 0;
+	var totalRating = 0;
+	var useful = 0;
+	var notUseful = 0;
+
 	$('form').submit(function(e) {
 		e.preventDefault();
 
@@ -29,13 +34,15 @@ $(function(){
 
 	});
 
-	$("#score").raty({
-		
-	})
-
 	$("#rating").raty({
-
+		rating: score
 	});
+
+	$("#score").raty({
+		rating: totalRating,
+		readOnly:true
+	});
+
 	var getData = function() {
 	// Set up a new query for our Music class
 		var query = new Parse.Query(Review)
@@ -56,16 +63,31 @@ $(function(){
 		// Empty out your ordered list
 		// Loop through your data, and pass each element to the addItem function
 		data.forEach(function(d){
+			totalRating = totalRating + d.get("rating");
+			num++;
 			addItem(d);
+			$("#thumbUp").click(function() {
+				useful++;
+			})
+			$("#thumbDown").click(function() {
+				notUseful++;
+			})
 		})
 	}
 
 	var addItem = function(d) {
+		var ave = $("#score").raty({
+		readOnly:true,
+		score: Number(totalRating) / Number(num),
+		halfShow: true
+		});
 		var title = d.get("title")
 		var comment = d.get("comment")
 		var rating =  d.get("rating")
+		var sum = useful + notUseful
 		var list = $('<li>' + '<h4>' + title + '</h4>' + '<h5>'+ 'Rating: ' + rating +'</h5>' +'<p>' + comment + '</p>' + '</li>')
+		var summary = $(useful + 'out of' + sum + 'think the review is useful')
+		list.append(summary)
 		$('#newList').append(list);
-
-	}
+	};
 });
